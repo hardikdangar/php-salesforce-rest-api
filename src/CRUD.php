@@ -1,6 +1,6 @@
 <?php
 
-namespace bjsmasth\Salesforce;
+namespace hardikdangar\Salesforce;
 
 use GuzzleHttp\Client;
 use Exception\Salesforce as SalesforceException;

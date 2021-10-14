@@ -1,6 +1,6 @@
 <?php
 
-namespace bjsmasth\Salesforce\Exception;
+namespace hardikdangar\Salesforce\Exception;
 
 class SalesforceAuthentication extends Salesforce
 {
