@@ -101,3 +101,13 @@ Delete
     $crud->delete('Account', $id);
 
 ```
+
+queryByCaseNumber
+
+```bash
+
+    $casenumber = 100001;
+    $crud = new \hardikdangar\Salesforce\CRUD();
+    $crud->queryByCaseNumber($casenumber);
+
+```

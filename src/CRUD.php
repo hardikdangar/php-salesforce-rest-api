@@ -37,6 +37,25 @@ class CRUD
         return json_decode($request->getBody(), true);
     }
 
+    public function queryByCaseNumber($casenumber)
+    {
+        $url = "{$this->instance_url}/services/data/v53.0/query";
+
+        $query = 'SELECT CaseNumber, Subject, Status FROM Case WHERE CaseNumber = \''.$casenumber.'\' ';
+
+        $client = new Client();
+        $request = $client->request('GET', $url, [
+            'headers' => [
+                'Authorization' => "OAuth {$this->access_token}"
+            ],
+            'query' => [
+                'q' => $query
+            ]
+        ]);
+
+        return json_decode($request->getBody(), true);
+    }
+
     public function create($object, array $data)
     {
         $url = "{$this->instance_url}/services/data/v53.0/sobjects/{$object}/";
