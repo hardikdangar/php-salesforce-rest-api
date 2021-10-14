@@ -106,7 +106,7 @@ queryByCaseNumber
 
 ```bash
 
-    $casenumber = 100001;
+    $casenumber = '100001';
     $crud = new \hardikdangar\Salesforce\CRUD();
     $crud->queryByCaseNumber($casenumber);
 
