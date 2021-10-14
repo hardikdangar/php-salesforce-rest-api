@@ -1,8 +1,7 @@
 {
-  "name": "bjsmasth/php-salesforce-rest-api",
+  "name": "hardikdangar/php-salesforce-rest-api",
   "license": "MIT",
   "keywords": [
-    "bjsmasth",
     "php salesforce",
     "php salesforce rest",
     "php salesforce rest api",
@@ -10,9 +9,9 @@
   ],
   "authors": [
     {
-      "name": "Bijesh Shrestha",
-      "email": "bjsmasth@gmail.com",
-      "homepage": "https://github.com/bjsmasth"
+      "name": "hardik dangar",
+      "email": "hardikdangar@gmail.com",
+      "homepage": "https://github.com/hardikdangar"
     }
   ],
   "require": {
@@ -21,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "bjsmasth\\Salesforce\\": "src/"
+      "hardikdangar\\Salesforce\\": "src/"
     }
   }
 }
