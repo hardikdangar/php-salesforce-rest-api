@@ -37,11 +37,15 @@ class CRUD
         return json_decode($request->getBody(), true);
     }
 
-    public function queryByCaseNumber($casenumber)
+    public function queryByCaseNumber($casenumber,$fields='')
     {
         $url = "{$this->instance_url}/services/data/v53.0/query";
 
-        $query = 'SELECT CaseNumber, Subject, Status FROM Case WHERE CaseNumber = \''.$casenumber.'\' ';
+        if($fields==''){
+            $fields = 'CaseNumber, Subject, Status';
+        }
+
+        $query = 'SELECT '.$fields.' FROM Case WHERE CaseNumber = \''.$casenumber.'\' ';
 
         $client = new Client();
         $request = $client->request('GET', $url, [
